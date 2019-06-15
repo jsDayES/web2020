@@ -1,0 +1,42 @@
+<section id="speakers" class="speakers-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 center-title text-center">
+                <h2>{{ text.speakers.title }}</h2>
+                <span class="center-line"></span>
+                <p>{{ text.speakers.description }}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="speakers">
+                {% for speaker in speakers %}
+                <li>
+                <div class="img-speaker-box">
+                    <img src="/img/speakers/{{ speaker.photo }}" width="200" height="200" class="img-circle" alt="{{ speaker.name }}">
+                    <span class="center-line"></span>
+                    <h3 class="speaker-name">{{ speaker.name }}</h3>
+                    <div class=" text-center">
+                        <ul class="list-inline social">
+                            {% if speaker.social and speaker.social.twitter %}
+                            <li><a target="_blank" href="{{ speaker.social.twitter }}"><span class="sr-only">Twitter {{ speaker.name }}</span> <i class="fa fa-twitter"></i></a></li>
+                            {% endif %}
+                            {% if speaker.social and speaker.social.github %}
+                            <li><a target="_blank" href="{{ speaker.social.github }}"><span class="sr-only">Github {{ speaker.name }}</span> <i class="fa fa-github"></i></a></li>
+                            {% endif %}
+                            {% if speaker.social and speaker.social.linkedin %}
+                            <li><a target="_blank" href="{{ speaker.social.linkedin }}"><span class="sr-only">Linkedin {{ speaker.name }}</span> <i class="fa fa-linkedin"></i></a></li>
+                            {% endif %}         
+                            {% if speaker.social and speaker.social.home %}
+                            <li><a target="_blank" href="{{ speaker.social.home }}"><span class="sr-only">{{ speaker.name }}</span> <i class="fa fa-home"></i></a></li>
+                            {% endif %}                                                     
+                        </ul>
+                    </div>
+                    <p class="speaker-bio">{{ speaker.bio | safe }}</p>
+                </div>
+                </li>       
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

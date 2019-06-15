@@ -1,0 +1,58 @@
+{% set languageUrl = true %}
+{% set backstretch = true %}
+
+{% extends "layout.html" %}
+{% block content %}
+{% include "partials/header.html" %}
+
+{% if mode === "wait" %}
+    {% include "partials/main-wait.html" %}
+{% elif mode === "cfp" %}
+    {% include "partials/main-cfp.html" %}
+    {% include "partials/proposals.html" %}
+{% else %}
+    {% include "partials/main-buy.html" %}
+{% endif %}
+
+{% if sections.streaming %}
+{% include "partials/streaming.html" %}
+{% endif %}
+
+{% if sections.speakers %}
+{% include "partials/speakers.html" %}
+{% endif %}
+
+{% if sections.schedule %}
+{% include "partials/schedule.html" %}
+{% endif %}
+
+{% if sections.presentation %}
+{% include "partials/presentation.html" %}
+{% endif %}
+
+{% if sections.where %}
+{% include "partials/where.html" %}
+{% endif %}
+
+{% if sections.tickets %}
+{% include "partials/tickets.html" %}
+{% endif %}
+
+{% if sections.newsletter %}
+{% include "partials/newsletter.html" %}
+{% endif %}
+
+{% if sections.contact %}
+{% include "partials/contact.html" %}
+{% endif %}
+
+{% if sections.organizers %}
+{% include "partials/organizers.html" %}
+{% endif %}
+
+{% if sections.sponsors %}
+{% include "partials/sponsors.html" %}
+{% endif %}
+
+{% include "partials/footer.html" %}
+{% endblock %}

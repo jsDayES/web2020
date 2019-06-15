@@ -1,0 +1,26 @@
+<section id="home" class="home-section">
+    <div class="home-inner shadow">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <div class="overImg welcome">
+                        <div class="welcomeLogo">
+                            <img src="/img/logo.png" class="img-logo" alt="Logo JSDay 2017">
+                            <span class="date">{{ text.home.date | safe }}</span>
+                        </div>
+                        <h1>{{ text.home.welcome }}</h1>
+                        <div class="text-center">
+                            {% if sections.tickets and section.streaming == false %}
+                            <a class="btn btn-lg btn-yellow" target="noopener" href="https://www.koliseo.com/jsdayes/jsday-es-2020">{{ text.tickets.buyticket }}</a>
+                            {% endif %}
+                            {% if sections.streaming %}
+                            <a class="btn btn-lg btn-yellow" href="{{root}}#streaming">{{ text.streaming.seeStreaming }}  <i class="glyphicon glyphicon-facetime-video"></i></a>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ _lang_ }}">
+    <head>
+        {% if languageUrl %}
+        <script>
+        var language = navigator.language || navigator.browserLanguage;
+
+        if(language === 'es' && window.location.href.indexOf('/es/') === -1) {
+            if(window.location.href[window.location.href.length - 1] === '/') {
+                window.location.href= window.location.href + 'es/';
+            } else {
+                window.location.href= window.location.href + '/es/';
+            }
+        }
+        </script>
+        {% endif %}
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ text.title }}</title>
+
+        <!-- START Google Analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122951526-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-122951526-1');
+        </script>
+        <!-- END Google Analytics -->
+
+        <!-- START Cookies Alert -->
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+        <script>
+          window.addEventListener("load", function(){
+          window.cookieconsent.initialise({
+            "palette": {
+              "popup": {
+                "background": "#000"
+              },
+              "button": {
+                "background": "#fdc12c"
+              }
+            },
+            "theme": "edgeless",
+            "position": "bottom-right",
+            "content": {
+              "message": "{{ text.cookies.message }}",
+              "dismiss": "{{ text.cookies.dismiss }}",
+              "link": "{{ text.cookies.link }}"
+            }
+          })});
+        </script>
+        <!-- END Cookies Alert -->
+    </head>
+    <body data-spy="scroll" class="{% if backstretch %}backstretch-enabled{% endif %} lang-{{ lang }}">
+        {% block content %} {% endblock %}
+
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <script src="/js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+          WebFont.load({
+            google: {
+              families: ['Cabin:400,400italic,500,600']
+            }
+          });
+        </script>
+    </body>
+</html>

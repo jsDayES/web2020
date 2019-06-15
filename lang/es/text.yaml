@@ -1,0 +1,139 @@
+title: JSDayES 2020
+header:
+    changeNavState: Cambiar estado navegación
+    home: Home
+    streaming: Streaming
+    speakers: Speakers
+    schedule: Programa
+    where: Dónde
+    newsletter: Newsletter
+    contact: Contacto
+    tickets: Entradas
+    organizers: Organización
+    sponsors: Sponsors
+    cfp: CfP
+    blog: Blog
+    codeOfConduct: CoC
+    pastEdition: Pasada edición
+
+cookies:
+    message: Hola, utilizamos cookies, solo para rastrear visitas a nuestro sitio web, no almacenamos datos personales.
+    link: Más información
+    dismiss: Ok, entendido!
+
+streaming:
+    seeStreaming: Ver streaming
+    title: ¡Síguenos en directo!
+    text: Sigue por streaming el JSDayES 2020, la mayor conferencia sobre JavaScript en España.
+
+newsletter:
+    url: https://app.mailjet.com/widget/iframe/2WPT/6fy
+    message1: Suscríbete a la newsletter del JSDayES y te mantendremos al día.
+    message2: Sin spam, solo las cosas importantes sobre el evento.
+
+where:
+    transport: Transporte
+
+home:
+    welcome: Bienvenido a JSDayES 2020
+    text1: Charlas & Talleres
+    text2: JavaScript, NodeJS, Angular, Polymer...
+    date: 5 Octubre 2020 <br/> Madrid
+
+speakers:
+    title: Speakers
+    description:  >
+        Hemos seleccionado los mejores ponentes para que nos cuenten
+        su experiencia con las tecnologías de JavaScript.
+
+cfp:
+    title: Envía tu Propuesta
+    join: Participa
+    description: ¿Quieres participar como ponente dando una charla? <br> No te lo pienses. Accede al formulario e incribe tu propuesta.
+    dates: Fechas Importantes
+    limit: Límite para envío de propuestas.
+    datelimit: 31/05/2020
+    notification: Fecha en que comunicaremos las propuestas aceptadas
+    notificationTitle: Notificación de Aceptación
+    notificationlimit: 07/2020
+    learn: Más información del CFP
+
+eventPresentation:
+    title: <span class="name">JSDayES</span> la conferencia de JavaScript más grande de España
+    description: <strong>JSDayES</strong> es una conferencia de 2 días multi-track (Español e Ingles) dedicada a Javascript y su ecosistema.
+    description2: JavaScript, NodeJS, React, AngularJS, Polymer... ¿te lo vas a perder?
+
+schedule:
+    title: Programa
+    description1: Las mejores sesiones sobre el ecosistema tecnológico de JavaScript.
+    description2: Dos días de talleres y charlas.
+
+contact:
+    title: Contacto
+    description: Para cualquier duda o sugerencia que tengas,<br> No dudes en ponerte en contacto con nosotros.
+    button: Contacta con Nosotros
+
+organizers:
+    title: Organizadores
+    description: Detrás de este evento estamos un grupo de comunidades de interés <br> relacionadas con el uso de tecnologías centradas en JavaScript.
+
+codeOfConduct:
+    title: Código de conducta
+    description: El evento se regirá por este <a href="/es/code-of-conduct-es.html">código de conducta</a>, que puede resumirse en: respeta a los demás.
+
+sponsors:
+    title: Sponsors
+    description: Patrocinar ofrece una oportunidad única para exponer tu marca y encontrar talentos y perfiles especializados en tecnologías JavaScript.
+    button: Apúntate como spónsor
+
+sponsorsInfo:
+    title: Modelos de patrocinios
+    allowed: Permitido
+    notallowed: No permitido
+    logo: Logotipo en web
+    acknowledgment: Agradecimiento en evento
+    printLogo: Logotipo en material impreso
+    logoscreen: Logo en la pantalla del evento
+    presentation: 5 minutos de presentación
+    table: Mesa con roll up
+    trackSponsor: Patrocinio sala
+    press: Referencia en prensa y RRSS
+    standalonemailing: Standalone mailing
+    rrss: Referencia en notas de prensa y RRSS
+    welcomePack: Flyer o regalo en Welcome Pack
+    mailing: Mailing standalone a los registrados
+    dinner: Cena con ponentes y organización
+    freetickets: Entradas de cortesía
+    person: persona
+    people: personas
+    ticket: ticket
+    tickets: tickets
+    sponsorticket: Entradas de cortesía
+
+tickets:
+    title: Entradas
+    superearly: Super Early Bird
+    superearlyprice: 25€
+    early: Early Bird
+    earlyprice: 45€
+    point1: 3 tracks
+    point2: Desayuno, comida y merienda
+    point3: Pack JSDayEs
+    buy: Comprar
+    buyticket: Comprar entrada
+    soldout: Agotadas
+    specialWorkshop: Workshop con @substack
+    specialWorkshopPrice: 80€
+    specialWorkshopDesc: Hands On: The Modular Web! by <a target="noopener" href="https://twitter.com/substack">@substack</a>
+    normal: Normales
+    normalTicketPrice: 55€
+    special: Estudiantes y desempleados
+    specialTicketPrice: 25€
+    warning: Es necesario acreditar estar en paro o ser estudiante en la entrada de la conferencia.
+    specialpoint: Lo mismo que un ticket normal
+
+footer:
+    twitter: Twitter de JSDayES
+    youtube: Canal Youtube de JSDayES
+    google: Google Plus de JSDayES
+    copyright: JSDayES - 4a Edición &copy; 2020

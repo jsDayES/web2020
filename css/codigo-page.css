@@ -1,0 +1,17 @@
+.codigoPage {
+    padding: 10rem 2em 2rem;
+    text-align:left;
+    font-size:1.25em;
+    line-height:1.3em;
+    width: 980px;
+    margin: 0 auto;
+}
+.codigoPage h3 {
+	margin-left: 1rem;
+	margin-top: 2rem;
+	color: #555;
+}
+.codigoPage p,
+.codigoPage ul {
+	margin-left: 2rem;
+}
