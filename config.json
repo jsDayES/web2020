@@ -1,5 +1,5 @@
 {
-    "mode": "wait",
+    "mode": "c4p",
     "sections": {
         "streaming": false,
         "speakers": false,
@@ -10,8 +10,8 @@
         "newsletter": true,
         "contact": true,
         "organizers": false,
-        "sponsors": false,
-        "blog": true,
+        "sponsors": true,
+        "blog": false,
         "codeOfConduct": true,
         "lastEdition": false
     },
