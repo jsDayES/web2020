@@ -1,5 +1,5 @@
 {
-    "mode": "c4p",
+    "mode": "cfp",
     "sections": {
         "streaming": false,
         "speakers": false,
