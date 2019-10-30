@@ -4,7 +4,7 @@ var gulp        = require ('gulp');
 var path        = require ('path');
 var fs          = require ('fs');
 var $           = require ('gulp-load-plugins')();
-var runSequence = require ('run-sequence');
+var runSequence = require ('gulp4-run-sequence');
 var webserver   = require ('gulp-webserver');
 var merge       = require ('merge-stream');
 var del         = require ('del');
@@ -48,13 +48,18 @@ var paths = {
 
 var isProd = false;
 
-gulp.task ('clean', function () {
+
+gulp.task('dist', (cb) => {
+    runSequence ('clean', 'build', cb);
+});
+
+gulp.task('clean', () => {
     return del ([
         './dist/**',
     ]);
 });
 
-gulp.task ('images', function () {
+gulp.task('images', () => {
     return gulp.src (paths.images)
         .pipe($.if(isProd, $.imagemin ([
             $.imagemin.jpegtran({progressive: true}),
@@ -63,12 +68,12 @@ gulp.task ('images', function () {
         .pipe (gulp.dest (paths.dist + '/img/'));
 });
 
-gulp.task ('ico', function () {
+gulp.task('ico', () => {
     return gulp.src (['favicon.png', 'favicon.ico'])
         .pipe (gulp.dest (paths.dist));
 });
 
-gulp.task ('js', function () {
+gulp.task('js', () => {
     return gulp.src (paths.js)
         .pipe ($.concat ('main.js',{newLine: ';'}))
         .pipe($.if(isProd, $.uglify().on('error', function(err) {
@@ -78,12 +83,12 @@ gulp.task ('js', function () {
         .pipe (gulp.dest (paths.dist + '/js/'));
 });
 
-gulp.task ('koliseo', function () {
+gulp.task('koliseo', () => {
     return gulp.src (paths.koliseo)
         .pipe (gulp.dest (paths.dist + '/js/'));
 });
 
-gulp.task ('css', function () {
+gulp.task('css', () => {
     var page =  gulp.src (paths.css)
         .pipe ($.concat ('main.css'))
         .pipe($.if(isProd, $.cssmin()))
@@ -97,7 +102,7 @@ gulp.task ('css', function () {
     return merge(page, codePage);
 });
 
-gulp.task('critical', function () {
+gulp.task('critical', () => {
   return gulp.src('dist/**/*.html')
         .pipe(critical({
             inline: true,
@@ -121,13 +126,13 @@ gulp.task('critical', function () {
             }],            
             css: ['dist/css/main.css']
         }))
-        .on('error', function(err) {
+        .on('error', (err) => {
             console.error(err.message);
         })
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task ('fonts', function () {
+gulp.task('fonts', () => {
     return gulp.src (paths.fonts)
         .pipe (gulp.dest(paths.dist + '/fonts'));
 });
@@ -165,17 +170,17 @@ function html(lang) {
     .pipe(gulp.dest(dist));
 };
 
-gulp.task ('html-en', function () {
+gulp.task('html-en', () => {
     return html('en');
 });
 
-gulp.task ('html-es', function () {
+gulp.task('html-es', () => {
     return html('es');
 });
 
-gulp.task ('build', ['images', 'ico', 'fonts', 'koliseo', 'js', 'css', 'html-en', 'html-es']);
+gulp.task('build', gulp.series('images', 'ico', 'fonts', 'koliseo', 'js', 'css', 'html-en', 'html-es'));
 
-gulp.task ('server', function () {
+gulp.task('server', () => {
     gulp.src ('dist/')
         .pipe (webserver ({
             port             : 5000,
@@ -186,7 +191,7 @@ gulp.task ('server', function () {
         }));
 });
 
-gulp.task ('server:dist', ['dist'], function () {
+gulp.task('server:dist', gulp.series('dist'), () => {
     gulp.src ('dist/')
         .pipe (webserver ({
             port             : 5000,
@@ -197,24 +202,20 @@ gulp.task ('server:dist', ['dist'], function () {
         }));
 });
 
-gulp.task ('dist', function (cb) {
-    runSequence ('clean', 'build', cb);
-});
-
-gulp.task('watch', function() {
-    gulp.watch([paths.html, paths.yaml], ['html-en', 'html-es']);
-    gulp.watch(paths.css, ['css']);
-    gulp.watch(paths.js, ['js']);
-    gulp.watch(paths.yaml, ['html-es', 'html-en']);
+gulp.task('watch', () => {
+    gulp.watch([paths.html, paths.yaml], gulp.series('html-en', 'html-es'));
+    gulp.watch(paths.css, gulp.series('css'));
+    gulp.watch(paths.js, gulp.series('js'));
+    gulp.watch(paths.yaml, gulp.series('html-es', 'html-en'));
 });
 
 
-gulp.task('dev',  function (cb) {
+gulp.task('dev', (cb) => {
     isProd = false;
     runSequence ('clean', 'build', 'watch', 'server:dist', cb);
 });
 
-gulp.task('default',  function (cb) {
+gulp.task('default', (cb) => {
     isProd = true;
     runSequence ('dist', cb);
 });
