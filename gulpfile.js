@@ -4,7 +4,6 @@ var gulp        = require ('gulp');
 var path        = require ('path');
 var fs          = require ('fs');
 var $           = require ('gulp-load-plugins')();
-var runSequence = require ('gulp4-run-sequence');
 var webserver   = require ('gulp-webserver');
 var merge       = require ('merge-stream');
 var del         = require ('del');
@@ -48,10 +47,6 @@ var paths = {
 
 var isProd = false;
 
-
-gulp.task('dist', (cb) => {
-    runSequence ('clean', 'build', cb);
-});
 
 gulp.task('clean', () => {
     return del ([
@@ -180,18 +175,9 @@ gulp.task('html-es', () => {
 
 gulp.task('build', gulp.series('images', 'ico', 'fonts', 'koliseo', 'js', 'css', 'html-en', 'html-es'));
 
-gulp.task('server', () => {
-    gulp.src ('dist/')
-        .pipe (webserver ({
-            port             : 5000,
-            livereload       : false,
-            directoryListing : {
-                enable : false,
-            }
-        }));
-});
+gulp.task('dist', gulp.series('clean', 'build'));
 
-gulp.task('server:dist', gulp.series('dist'), () => {
+gulp.task('server', () => {
     gulp.src ('dist/')
         .pipe (webserver ({
             port             : 5000,
@@ -210,12 +196,12 @@ gulp.task('watch', () => {
 });
 
 
-gulp.task('dev', (cb) => {
+gulp.task('dev', () => {
     isProd = false;
-    runSequence ('clean', 'build', 'watch', 'server:dist', cb);
+    return gulp.parallel(gulp.series('clean', 'build', 'watch'), 'server')();
 });
 
-gulp.task('default', (cb) => {
+gulp.task('default', () => {
     isProd = true;
-    runSequence ('dist', cb);
+    return gulp.parallel('dist', 'server')();
 });
