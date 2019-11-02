@@ -1,13 +1,10 @@
 'use strict';
 
 var gulp        = require ('gulp');
-var path        = require ('path');
-var fs          = require ('fs');
 var $           = require ('gulp-load-plugins')();
 var webserver   = require ('gulp-webserver');
 var merge       = require ('merge-stream');
 var del         = require ('del');
-var addsrc      = require('gulp-add-src');
 var YAML = require('yamljs');
 var critical = require('critical').stream;
 
