@@ -52,10 +52,10 @@ cfp:
     description: Do you want to give a talk? <br> Do not think about it. Access and sign up!
     dates: Important dates
     limit: Limit for submitting proposals.
-    datelimit: May 31th, 2020
+    datelimit: January 31st, 2020
     notification: Date when we'll communicate accepted proposals.
     notificationTitle: Notification of acceptance
-    notificationlimit: Mid June 2020
+    notificationlimit: Mid March 2020
     learn: Learn more about the CFP
 
 eventPresentation:
