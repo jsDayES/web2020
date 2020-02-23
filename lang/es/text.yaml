@@ -108,7 +108,9 @@ sponsorsInfo:
     people: personas
     ticket: ticket
     tickets: tickets
+    popcorn: Palomitas
     sponsorticket: Entradas de cortesía
+    jobsOffer: Ofertas de empleo publicadas mediante Twitter
 
 tickets:
     title: Entradas

@@ -90,16 +90,16 @@ sponsorsInfo:
     title: Sponsorship models
     allowed: Allowed
     notallowed: Not allowed
-    logo: Logo on the web
+    logo: Brand on the web
     acknowledgment: Thanks at the event
-    printLogo: Logo in printed material
+    printLogo: Brand on a printed material
     logoscreen: Logo in event screen
     presentation: 5 minutes presentation
     table: Table with roll up
     trackSponsor: Sponsorship room
     press: Reference in press and social media
     standalonemailing: Standalone mailing
-    rrss: Press releases and Social Media
+    rrss: Social media post before and during the event
     welcomePack: Flyer or gift in Welcome Pack
     mailing: Standalone mailing
     dinner: Dinner with speakers and organization
@@ -108,7 +108,9 @@ sponsorsInfo:
     people: people
     ticket: ticket
     tickets: tickets
+    popcorn: Popcorn
     sponsorticket: Complimentary ticket
+    jobsOffer: Job offers by tweet
 
 tickets:
     title: Tickets
