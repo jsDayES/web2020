@@ -20,3 +20,8 @@ Push the dist folder to the repository.
 ```
 npm run deploy
 ```
+
+## List of modes
+
++ cfp
++ wait
