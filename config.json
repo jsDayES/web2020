@@ -13,6 +13,7 @@
         "sponsors": true,
         "blog": false,
         "codeOfConduct": true,
+        "posts": true,
         "lastEdition": true
     },
     "koliseoCfp": "https://www.koliseo.com/jsdayes/jsday-es-2020/r4p/5641747845611520",
