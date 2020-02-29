@@ -56,6 +56,10 @@
                 {% if sections.codeOfConduct %}
                 <li><a href="{{root}}code-of-conduct-{{lang}}.html">{{ text.header.codeOfConduct }}</a></li>
                 {% endif %}
+                
+                {% if sections.posts %}
+                <li><a href="{{root}}posts-{{lang}}.html">{{ text.header.posts }}</a></li>
+                {% endif %}
 
                 {% if sections.lastEdition %}
                 <li><a href="http://2018.jsday.es">{{ text.header.pastEdition }}</a></li>

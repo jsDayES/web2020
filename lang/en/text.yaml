@@ -14,6 +14,7 @@ header:
     cfp: CfP
     blog: Blog
     codeOfConduct: CoC
+    posts: Posts
     pastEdition: Past edition
 
 cookies:
@@ -80,6 +81,10 @@ organizers:
 codeOfConduct:
     title: Code of conduct
     description: The event will be governed by this <a href="/code-of-conduct-en.html">code of conduct</a>, which can be summarized in: respects others.
+
+posts:
+    title: Posts
+    description: Posts related with event organization
 
 sponsors:
     title: Sponsors

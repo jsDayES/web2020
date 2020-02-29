@@ -24,11 +24,13 @@ var paths = {
         'css/style.css',
         'css/kagenda-styles.css',
         'css/custom.css',
-        'css/codigo-page.css'
+        'css/codigo-page.css',
+        'css/posts-page.css',
     ],
     code    : [
         'css/custom.css',
-        'css/codigo-page.css'
+        'css/codigo-page.css',
+        'css/posts-page.css',
     ],
     js     : [
         './js/lazy-load-image.js',
