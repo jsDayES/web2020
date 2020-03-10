@@ -21,19 +21,18 @@
         {
             "name": "Ramón Corominas",
             "bio": "",
-            "photo": "http://placekitten.com/200/300",
+            "photo": "ramon-corominas.jpg",
             "social": {
-                "twitter": "https://twitter.com/cataflu",
-                "github": "https://github.com/cat2608/"
+                "twitter": "https://twitter.com/tinitun"
             }
         },
         {
             "name": "Juanjo Montiel",
             "bio": "",
-            "photo": "http://placekitten.com/200/300",
+            "photo": "juanjo-motiel.jpg",
             "social": {
-                "twitter": "https://twitter.com/cataflu",
-                "github": "https://github.com/cat2608/"
+                "twitter": "https://twitter.com/kastwey",
+                "home": "http://www.kastwey.org/"
             }
         },
         {
@@ -65,10 +64,9 @@
         {
             "name": "Rubén Aguilera",
             "bio": "Senior frontend developer en Kairós. Soy una persona inquieta, emprendedora y sin miedo a los retos. Por ello, entre otras razones, me metí de lleno en el mundo frontend, un mundo que avanza constantemente al mismo ritmo que lo hacen las tecnologías que usamos día tras día. En todos los años que llevo desarrollando en el sector he utilizado diversas librerías, lenguajes y frameworks.",
-            "photo": "http://placekitten.com/200/300",
+            "photo": "ruben-aguilera.png",
             "social": {
-                "twitter": "https://twitter.com/CristinaGrim",
-                "linkedin": "https://www.linkedin.com/in/cristina-ponce/"
+                "twitter": "https://twitter.com/raguilera82"
             }
         },
         {
@@ -100,9 +98,9 @@
         {
             "name": "Jorge del Casar",
             "bio": "Lead frontend engineer at MyTaxi. Javascript hacker. Crossfiter and paleo-chef. I play the ukelele and read about political science. Gamer and cinephile.",
-            "photo": "http://placekitten.com/200/300",
+            "photo": "jorge-del-casar.jpg",
             "social": {
-                "twitter": "https://twitter.com/sospedra_r"
+                "twitter": "https://twitter.com/jorgecasar"
             }
         },
         {
