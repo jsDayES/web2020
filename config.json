@@ -5,7 +5,7 @@
         "speakers": false,
         "schedule": false,
         "presentation": false,
-        "where": true,
+        "where": false,
         "tickets": false,
         "newsletter": true,
         "contact": true,
