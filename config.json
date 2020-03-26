@@ -10,7 +10,7 @@
         "newsletter": true,
         "contact": true,
         "organizers": false,
-        "sponsors": true,
+        "sponsors": false,
         "blog": false,
         "codeOfConduct": true,
         "posts": true,
